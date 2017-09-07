@@ -11,4 +11,4 @@ https://threathunter.org/topic/594a9f0fde1d70c20885ccd5
     ThreatHunter: 一个专注于高级威胁发现与安全数据分析的社区
 
 ### 使用：
-    ```python struts2_check.py http://www.demo.com/```
+    python struts2_check.py http://www.demo.com/
