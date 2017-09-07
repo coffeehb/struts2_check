@@ -4,11 +4,12 @@
 # @Author  : Komi
 # @File    : struts2_hunt.py
 # @Project : POC-T
-# @Ver:    : 0.1
+# @Ver:    : 0.2
 # Referer   https://threathunter.org/topic/594a9f0fde1d70c20885ccd5
 
 import time
 import re
+import sys
 import urlparse
 import httplib, urllib, urllib2
 
@@ -154,3 +155,13 @@ def poc(target):
         return "[success] %s is struts2! [checkl18n]" % target
 
     return False
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        result = poc(sys.argv[1])
+        if not result:
+            print "[*] %s is not struts2!" % sys.argv[1]
+        else:
+            print result
+    else:
+        print "\n[*]usag: python poc.py http://www.demo.com"
